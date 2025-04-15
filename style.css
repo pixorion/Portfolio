@@ -7,8 +7,9 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-  background-size: cover;
+  background: linear-gradient(to bottom, #0d0d2b 0%, #000000 100%), url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-repeat: repeat;
+  background-size: contain;
   color: #fff;
   line-height: 1.6;
   min-height: 100vh;
@@ -118,7 +119,7 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Buttons (only used outside expertise) */
+/* Buttons (used only in non-expertise areas) */
 button, .btn {
   display: inline-block;
   background: #00ffe1;
