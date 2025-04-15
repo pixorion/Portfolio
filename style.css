@@ -5,34 +5,66 @@ body {
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  color: #00ffe1; /* Neon-style headings */
+h1, h2 {
+  color: #00ffe1;
   text-shadow: 0 0 10px #00ffe1;
+  text-align: center;
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.6); /* slight dark overlay */
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 30px;
-  border-radius: 20px;
+  margin: 50px auto;
+  border-radius: 15px;
   max-width: 900px;
-  margin: 80px auto;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+ul li {
+  padding: 10px 0;
+  font-size: 1.1rem;
+}
+
+a {
+  color: #00ffe1;
+  text-decoration: none;
 }
 
 button {
   background-color: #00ffe1;
   color: #000;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  margin: 10px;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px #00ffe1;
 }
 
 button:hover {
   background-color: #00c0a3;
-  box-shadow: 0 0 10px #00ffe1;
+  box-shadow: 0 0 20px #00ffe1;
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0px);
+    }
