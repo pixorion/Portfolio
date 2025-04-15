@@ -62,9 +62,8 @@ section {
   padding: 40px 30px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1; /* Make everything visible by default */
+  transform: translateY(0); /* Remove hidden offset */
   box-shadow: 0 0 15px #0ff;
 }
 
