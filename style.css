@@ -1,70 +1,114 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #ffffff;
-  overflow-x: hidden;
+  color: #fff;
 }
 
-h1, h2 {
-  color: #00ffe1;
-  text-shadow: 0 0 10px #00ffe1;
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px 20px;
   text-align: center;
+  box-shadow: 0 0 15px #0ff;
 }
 
-.container {
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 30px;
-  margin: 50px auto;
-  border-radius: 15px;
-  max-width: 900px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+header h1 {
+  font-size: 3em;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+header p {
+  color: #ddd;
+  font-size: 1.2em;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+nav a {
+  padding: 10px 20px;
+  color: #0ff;
+  border: 2px solid #0ff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #0ff;
+}
+
+nav a:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 20px #0ff;
+}
+
+section {
+  width: 80%;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+  box-shadow: 0 0 15px #0ff;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  text-align: center;
+  color: #0ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #0ff;
 }
 
 ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
   text-align: center;
 }
 
 ul li {
-  padding: 10px 0;
-  font-size: 1.1rem;
+  padding: 10px;
+  font-size: 1.1em;
+  color: #ccc;
 }
 
-a {
-  color: #00ffe1;
+.contact a {
+  display: block;
+  text-align: center;
+  margin: 8px;
+  color: #0ff;
   text-decoration: none;
+  font-size: 1.1em;
+  transition: 0.3s;
 }
 
-button {
-  background-color: #00ffe1;
-  color: #000;
-  border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  margin: 10px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  box-shadow: 0 0 10px #00ffe1;
+.contact a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #0ff;
 }
 
-button:hover {
-  background-color: #00c0a3;
-  box-shadow: 0 0 20px #00ffe1;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0px);
-    }
+.contact p {
+  text-align: center;
+  margin-top: 10px;
+  color: #ccc;
+  }
