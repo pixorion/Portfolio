@@ -1,33 +1,13 @@
-// script.js
+// Scroll Reveal Animation
+window.addEventListener("scroll", function () {
+  const reveals = document.querySelectorAll(".reveal");
 
-// Smooth scrolling to sections
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
 
-// Animation on scroll (for fade-in effect)
-const fadeInElements = document.querySelectorAll('.fade-in');
-
-const checkVisibility = () => {
-  fadeInElements.forEach(element => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementVisible = 150;
-
-    if (elementTop < window.innerHeight - elementVisible) {
-      element.classList.add('fade-in');
-    } else {
-      element.classList.remove('fade-in');
+    if (elementTop < windowHeight - 100) {
+      reveals[i].classList.add("active");
     }
-  });
-};
-
-window.addEventListener('scroll', checkVisibility);
-
-// Initial check for elements in view on page load
-checkVisibility();
+  }
+});
